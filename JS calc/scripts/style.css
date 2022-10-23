@@ -1,0 +1,51 @@
+/* СТИЛИЗАЦИЯ ДОКУМЕНТА (НЕ НАДО ТРОГАТЬ) */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* СТИЛИЗАЦИЯ ОСНОВНОГО КОНТЕЙНЕРА КАЛЬКУЛЯТОРА */
+
+.calculator {
+    border: 0.1em solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1em;
+}
+
+/* СТИЛИЗАЦИЯ КНОПОК КАЛЬКУЛЯТОРА */
+
+.calculator > button {
+    min-width: 100px;
+    min-height: 50px;
+    cursor: pointer;
+}
+
+/* СТИЛИЗАЦИЯ ИКОНОК В КНОПКАХ */
+
+.calculator > button > img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border: none;
+}
+
+/* СТИЛИЗАЦИЯ ВЫВОДА */
+
+.calculator > output {
+    grid-column: 1 / -1;
+    background-color: rgb(0, 0, 0);
+    padding: 1rem;
+    color: #fff;
+    font-size: 50px;
+    text-align: end;
+}
