@@ -11,8 +11,8 @@ function createContact(name, number, description) {
         <p id="contact-number">${number}</p>
         <textarea id="contact-number-input" class="hidden">${number}</textarea>
         <div class="contact-actions">
-            <button class="contact-edit">edit</button>
-            <button class="contact-delete">delete</button>
+            <button class="contact-edit">редактировать</button>
+            <button class="contact-delete">удалить</button>
         </div>
     </div>
     <p id="contact-description">${description}</p>
@@ -58,6 +58,6 @@ function createContact(name, number, description) {
 }
 
 addEl.addEventListener('click', (e) => {
-    const el = createContact('Title','Number', 'Description');
+    const el = createContact('Заглавие','Номер', 'Описание');
     contactsEl.appendChild(el);
 })
