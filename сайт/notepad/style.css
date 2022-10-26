@@ -1,0 +1,19 @@
+#wrapper {
+	width: 600px;
+}
+
+#textarea {
+	width: 400px;
+	height: 500px;
+	padding: 10px;
+}
+
+#list {
+	float: right;
+	margin-top: 0;
+	padding-left: 0;
+}
+
+#list li {
+	margin-bottom: 10px;
+}

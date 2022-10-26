@@ -1,0 +1,111 @@
+
+/* СТИЛИЗАЦИЯ ДОКУМЕНТА (НЕ НАДО ТРОГАТЬ) */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: anywhere ;
+}
+
+.content {  
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* СТИЛИЗАЦИЯ ОСНОВНОГО КОНТЕЙНЕРА КАЛЬКУЛЯТОРА */
+
+
+.normal{
+  justify-content: center;
+  align-items: center;
+    content: "";
+    background: linear-gradient( #d31010,#000000, #000000);
+    width: auto;
+    height: 970px;
+    z-index: -1;
+    animation: rotate 20s linear infinite;
+    transition: transform 60s ease;
+}
+.calculator {
+    border: 0.9em solid black;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.1em;
+    
+}
+.calculator::after{
+    position: absolute;
+    content: "";
+    border-radius: 50px;
+    z-index: -1;
+}
+
+@keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
+/* СТИЛИЗАЦИЯ КНОПОК КАЛЬКУЛЯТОРА */
+
+.calculator > button {
+  font-size: 25px;
+    border-color: red;
+    border-radius: 10px;
+    background: lin;
+    min-width: 70px;
+    min-height: 70px;
+    cursor: pointer;
+}
+
+/* СТИЛИЗАЦИЯ ИКОНОК В КНОПКАХ */
+
+.calculator > button > img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border: none;
+}
+
+/* СТИЛИЗАЦИЯ ВЫВОДА */
+
+.calculator > output {
+    width: 440px;
+    grid-column: 1 / -1;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 50px;
+    text-align: end;
+    margin-bottom: -4px ;
+
+}
+a {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    background-color: rgb(255, 9, 9);
+    margin-top: -45%;
+    margin-left: 90%;
+    margin-right: 1%;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    transition: all 0.001s ease;
+    animation: rotate 60s linear infinite;
+}
+a:hover {
+	background: rgb(0, 0, 0);
+}
+@keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }
